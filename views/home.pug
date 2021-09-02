@@ -1,7 +1,15 @@
 doctype html
 html
+  head
+    style  
+      include ./styles.css
   body
     h1 Sensor App
-    ul
-      each val in data
-          li= val.Name
+    div(class="cards")
+    each val in data 
+        div(class="card card-1")
+          h2(class="card__title") val.Name
+          ul
+            li
+             h3(class="card__subtitle") val.Temperature
+         
